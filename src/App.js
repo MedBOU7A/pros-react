@@ -1,23 +1,22 @@
-import logo from './logo.svg';
+import React from 'react';
+import Profile from './profile/Profile';
 import './App.css';
+import img from './profile/2.jpg';
 
 function App() {
-  return (
+  const input ={
+    FullName:"Mohamed Amine Bouhari",
+    Bio:"Born in 26/10/1992",
+    Profession:"Web developper"
+  }
+  const HandelName = () => {
+    alert(`This is my name :${input.FullName}`)
+  }
+ return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Profile data ={input}  message ={HandelName } >
+        <img scr ={img} alt = 'image' />
+      </Profile>
     </div>
   );
 }
